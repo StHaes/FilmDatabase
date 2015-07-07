@@ -1,9 +1,6 @@
 package be.vdab.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Car {
@@ -12,6 +9,9 @@ public class Car {
     private Integer id;
 
     private String licensePlate;
+
+    @ManyToOne
+    private Model model;
 
     public Car() {
     }
@@ -34,5 +34,13 @@ public class Car {
 
     public void setLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
+    }
+
+    public Model getModel() {
+        return model;
+    }
+
+    public void setModel(Model model) {
+        this.model = model;
     }
 }
