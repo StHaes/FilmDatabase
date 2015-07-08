@@ -23,9 +23,9 @@ public class ModelService {
     public ResponseEntity<Model> findById(@PathVariable("modelId") int id) {
         Model model = repository.findOne(id);
         if(model == null) {
-            return new ResponseEntity<Model>(NOT_FOUND);
+            return new ResponseEntity<>(NOT_FOUND);
         } else {
-            return new ResponseEntity<Model>(model, OK);
+            return new ResponseEntity<>(model, OK);
         }
     }
 

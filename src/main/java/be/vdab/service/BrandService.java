@@ -23,9 +23,9 @@ public class BrandService {
     public ResponseEntity<Brand> findById(@PathVariable("brandId") int id) {
         Brand brand = repository.findOne(id);
         if(brand == null) {
-            return new ResponseEntity<Brand>(NOT_FOUND);
+            return new ResponseEntity<>(NOT_FOUND);
         } else {
-            return new ResponseEntity<Brand>(brand, OK);
+            return new ResponseEntity<>(brand, OK);
         }
     }
 

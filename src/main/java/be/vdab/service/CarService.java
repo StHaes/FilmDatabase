@@ -40,9 +40,9 @@ public class CarService {
     public ResponseEntity<Car> findById(@PathVariable("carId") int id) {
         Car car = repository.findOne(id);
         if(car == null) {
-            return new ResponseEntity<Car>(NOT_FOUND);
+            return new ResponseEntity<>(NOT_FOUND);
         } else {
-            return new ResponseEntity<Car>(car, OK);
+            return new ResponseEntity<>(car, OK);
         }
     }
 
