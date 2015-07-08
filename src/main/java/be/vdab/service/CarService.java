@@ -1,4 +1,4 @@
-package be.vdab.services;
+package be.vdab.service;
 
 import be.vdab.domain.Car;
 import be.vdab.repository.CarRepository;

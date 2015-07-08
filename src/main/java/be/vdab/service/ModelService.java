@@ -1,6 +1,5 @@
-package be.vdab.services;
+package be.vdab.service;
 
-import be.vdab.domain.Brand;
 import be.vdab.domain.Model;
 import be.vdab.repository.ModelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
