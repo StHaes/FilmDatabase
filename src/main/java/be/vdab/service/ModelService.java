@@ -36,7 +36,7 @@ public class ModelService {
         }
     }
 
-    @RequestMapping(value = "/models", method = GET)
+    @RequestMapping(value = "/models", method = GET, produces = "application/json")
     public List<Model> findAll() {
         return modelRepository.findAll();
     }

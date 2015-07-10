@@ -10,6 +10,7 @@
     <body>
         <h1>Home</h1>
         <p>This is the home page.</p>
-        <a href="car.html?id=1">Example</a>
+        <a href="car.html?id=1">Car details</a>
+        <a href="chooser.html">Model chooser</a>
     </body>
 </html>

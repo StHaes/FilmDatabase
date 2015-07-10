@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>XHR Example</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+
+        <style type="text/css">
+            div {
+                margin: 2rem;
+            }
+        </style>
+
+        <script type="application/javascript">
+            angular.module('cars', [])
+                    .controller('CarController', function($scope, $http) {
+                        $http.get('/brands').success(function(data) {
+                            $scope.brands = data;
+                        });
+
+                        this.onChooseBrand = function(brand) {
+                            $http.get('/models?filterBrand=' + brand.id).success(function(data) {
+                                $scope.models = data;
+                            });
+                        };
+
+                        this.onChooseModel = function(model) {
+                            alert("You have selected model '" + model.name + "'");
+                        }
+                    });
+        </script>
+    </head>
+    <body ng-app="cars" ng-controller="CarController as cc">
+        <h1>Car chooser</h1>
+
+        <div>
+            Brand: <select ng-change="cc.onChooseBrand(brand)"
+                           ng-model="brand"
+                           ng-options="brand.name for brand in brands track by brand.id"></select>
+        </div>
+        <div>
+            Model: <select ng-change="cc.onChooseModel(model)"
+                           ng-model="model"
+                           ng-options="model.name for model in models track by model.id"></select>
+        </div>
+
+    </body>
+</html>
