@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 
 /**
  * Created by jeansmits on 10/07/15.
@@ -16,8 +18,11 @@ public class FilmController {
     @Autowired
     private FilmRepository filmRepository;
     
-@RequestMapping("/film")
+    @RequestMapping("/film")
     public Film film(@RequestParam("id") Integer id){
         return filmRepository.findOne(id) ;
     }
+
+    @RequestMapping("/films")
+    public List<Film> films(){ return filmRepository.findAll();}
 }
