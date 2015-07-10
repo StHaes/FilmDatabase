@@ -1,5 +1,7 @@
 package be.vdab.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +13,7 @@ public class Model {
     private String name;
 
     @ManyToOne
+    @JsonIgnore
     private Brand brand;
 
     public Model() {
