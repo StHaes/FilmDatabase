@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -24,5 +25,8 @@ public class FilmController {
     }
 
     @RequestMapping("/films")
-    public List<Film> films(){ return filmRepository.findAll();}
+    public String films(Map<String,Object> model){
+        model.put("films",filmRepository.findAll());
+        return "/films";
+    }
 }

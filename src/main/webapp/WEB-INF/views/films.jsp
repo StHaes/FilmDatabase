@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>All Movies</title>
@@ -19,7 +20,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-<c:forEach ></c:forEach>
+<h1>All Movies</h1>
+<table class="table table-striped">
+  <th>Title</th>
+  <c:forEach var="film" items="${films}">
+    <tr>
+      <td><a href="film?id=${film.id}">${film.title}</a></td>
+      <td>${film.id}</td>
+    </tr>
+  </c:forEach>
+</table>
 
 </body>
 </html>
