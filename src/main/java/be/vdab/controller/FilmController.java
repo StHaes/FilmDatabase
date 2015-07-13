@@ -1,6 +1,7 @@
 package be.vdab.controller;
 
 import be.vdab.domain.Film;
+import be.vdab.domain.Gender;
 import be.vdab.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -61,4 +62,6 @@ public class FilmController {
         filmRepository.delete(filmId);
         return "redirect:/films";
     }
+
+
 }

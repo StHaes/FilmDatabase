@@ -1,4 +1,6 @@
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: jeansmits
@@ -33,6 +35,7 @@
     <div> <sf:input path="length"/></div>
     <span class="label label-default">Director: </span>
     <div><sf:input path="director" class="md-12" /></div>
+    <span class="label label-default">Genre: </span>
     <span class="label label-default">Description:</span>
     <div><sf:textarea path="summary" class="md-12"/></div>
     <span class="label label-default">Trailer Link: </span>

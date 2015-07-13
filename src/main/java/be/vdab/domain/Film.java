@@ -2,10 +2,7 @@ package be.vdab.domain;
 
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -19,8 +16,9 @@ public class Film {
     private String title;
     private Integer length;
     private String director;
+    @Enumerated(value = EnumType.STRING)
     private Genre genre;
-//    private List<Character> cast;
+//    private List<FilmCharacter> cast;
     private String summary;
 //    private List<Comment> comments;
     private String trailerLink;
