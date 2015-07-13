@@ -17,12 +17,12 @@ public class Film {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String title;
-//    private Integer length;
-//    private String director;
+    private Integer length;
+    private String director;
 //    private List<Character> cast;
-//    private String summary;
+    private String summary;
 //    private List<Comment> comments;
-//    private String trailerLink;
+    private String trailerLink;
 
 
     public Film(String title) {
@@ -46,5 +46,37 @@ public class Film {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Integer getLength() {
+        return length;
+    }
+
+    public void setLength(Integer length) {
+        this.length = length;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    public String getTrailerLink() {
+        return trailerLink;
+    }
+
+    public void setTrailerLink(String trailerLink) {
+        this.trailerLink = trailerLink;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
     }
 }

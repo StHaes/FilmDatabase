@@ -18,7 +18,12 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body >
 <h1>${film.title}</h1>
+<div><h2>Director: ${film.director}</h2></div>
+<div><h3>Length: ${film.length} min</h3></div>
+<div style="padding: 25px">
+  <p>${film.summary}</p>
+</div>
 </body>
 </html>
