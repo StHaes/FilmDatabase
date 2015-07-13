@@ -9,12 +9,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+    <title>Form</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container"><h1>Add/edit in the database.</h1></div>
+<div> </div>
 <sf:form commandName="film" action="/makeFilm" class="container">
 
-  <div>
+  <div class="container">
     <span class="label label-default">Title:</span>
     <div><sf:input path="title" /></div>
     <div><sf:errors path="title"/></div>
@@ -23,7 +34,7 @@
     <span class="label label-default">Director: </span>
     <div><sf:input path="director" class="md-12" /></div>
     <span class="label label-default">Description:</span>
-    <div><sf:input path="summary" class="md-12"/></div>
+    <div><sf:textarea path="summary" class="md-12"/></div>
     <span class="label label-default">Trailer Link: </span>
     <div><sf:input path="trailerLink" class="md-12"/></div>
     <sf:hidden path="id"/>

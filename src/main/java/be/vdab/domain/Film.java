@@ -19,6 +19,7 @@ public class Film {
     private String title;
     private Integer length;
     private String director;
+    private Genre genre;
 //    private List<Character> cast;
     private String summary;
 //    private List<Comment> comments;
@@ -78,5 +79,13 @@ public class Film {
 
     public void setSummary(String summary) {
         this.summary = summary;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
     }
 }

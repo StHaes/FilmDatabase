@@ -20,16 +20,23 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>All Movies</h1>
-<table class="table table-striped">
+<div class="container"><h1>All Movies</h1></div>
+<div class="container"><table class="table table-striped">
   <th>Title</th>
+    <th>Director</th>
+    <th>Length</th>
+    <th> </th>
+    <th> </th>
   <c:forEach var="film" items="${films}">
     <tr>
       <td><a href="film?id=${film.id}">${film.title}</a></td>
-      <td>${film.id}</td>
+      <td>${film.director}</td>
+      <td>${film.length} minutes</td>
+      <td><a class="glyphicon glyphicon-cog btn btn-success" href="/form?id=${film.id}"> Edit</a></td>
+      <td><a class="glyphicon glyphicon-remove btn btn-danger" href="/deleteFilm?id=${film.id}"> Delete</a></td>
     </tr>
   </c:forEach>
-</table>
-
+</table></div>
+<div class="container"><a class="glyphicon glyphicon-plus btn btn-info" href="/form">Add a movie</a></div>
 </body>
 </html>
