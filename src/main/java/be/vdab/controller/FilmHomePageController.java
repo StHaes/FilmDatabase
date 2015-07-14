@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Controller
 public class FilmHomePageController {
- @Autowired
- private FilmRepository filmRepository;
 
  @RequestMapping("/")
     public String filmHomePage() {

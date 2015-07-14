@@ -1,3 +1,4 @@
+<%@ page import="be.vdab.domain.FilmCharacter" %>
 <%--
   Created by IntelliJ IDEA.
   User: jeansmits
@@ -8,9 +9,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>${Filmcharacter.name}</title>
+    <title>${filmCharacter.name}</title>
 </head>
 <body>
-${Filmcharacter.name}
+${filmCharacter.actor.firstName}
+
 </body>
 </html>

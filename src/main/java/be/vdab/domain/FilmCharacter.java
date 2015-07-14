@@ -1,9 +1,6 @@
 package be.vdab.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by jeansmits on 10/07/15.
@@ -14,12 +11,15 @@ public class FilmCharacter {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    @OneToOne
+    private Actor actor;
 
     public FilmCharacter() {
     }
 
-    public FilmCharacter(String name) {
+    public FilmCharacter(String name, Actor actor) {
         this.name = name;
+        this.actor = actor;
     }
 
     public Integer getId() {
