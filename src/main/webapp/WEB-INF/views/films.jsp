@@ -37,6 +37,7 @@
     </tr>
   </c:forEach>
 </table></div>
-<div class="container"><a class="glyphicon glyphicon-plus btn btn-info" href="/form">Add a movie</a></div>
+<div class="container"><a class="glyphicon glyphicon-plus btn btn-info" href="/form">Add a movie</a>
+  <a href="/" class="glyphicon glyphicon-home btn btn-primary"> Home</a></div>
 </body>
 </html>

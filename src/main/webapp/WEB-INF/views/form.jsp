@@ -50,7 +50,7 @@
 
     <div class="input-group">
         <span class="input-group-addon">Genre</span>
-        <sf:select path="genre" items="${genres}"/></div>
+        <sf:select path="genre" items="${genres}" class="form-control"/></div>
     <div class="input-group">
         <span class="input-group-addon">Description</span>
         <sf:textarea path="summary" class="form-control"/>
@@ -58,11 +58,12 @@
 
     <div class="input-group">
         <span class="input-group-addon">Trailer Link</span>
-        <sf:input path="trailerLink" class="form-control"/>
+        <sf:input path="trailer" class="form-control"/>
     </div>
 
     <sf:hidden path="id"/>
-    <div><sf:button type="submit" class="btn btn-success">Add a Movie</sf:button></div>
+    <div><sf:button type="submit" class="btn btn-success">Add a Movie</sf:button>
+        <a href="/films" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>
 
 </sf:form>
 

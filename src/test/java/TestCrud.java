@@ -23,7 +23,12 @@ public class TestCrud {
     FilmRepository filmRepository;
 
     @Test
-    public void testFindone(){
+    public void testFindFilm(){
         Assert.assertEquals("The Fellowship of the Ring",filmRepository.findOne(1).getTitle());
+    }
+    @Test
+    public void deleteFilm(){
+        filmController.deleteFilm(2);
+        Assert.assertNull(filmRepository.findOne(2));
     }
 }

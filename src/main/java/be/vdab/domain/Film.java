@@ -3,7 +3,6 @@ package be.vdab.domain;
 
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * Created by jeansmits on 10/07/15.
@@ -21,7 +20,7 @@ public class Film {
 //    private List<FilmCharacter> cast;
     private String summary;
 //    private List<Comment> comments;
-    private String trailerLink;
+    private String trailer;
 
 
     public Film(String title) {
@@ -63,12 +62,12 @@ public class Film {
         this.director = director;
     }
 
-    public String getTrailerLink() {
-        return trailerLink;
+    public String getTrailer() {
+        return trailer;
     }
 
-    public void setTrailerLink(String trailerLink) {
-        this.trailerLink = trailerLink;
+    public void setTrailer(String trailer) {
+        this.trailer = trailer;
     }
 
     public String getSummary() {

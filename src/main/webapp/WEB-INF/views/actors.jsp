@@ -29,15 +29,16 @@
   <th> </th>
   <c:forEach var="actor" items="${actors}">
     <tr>
-      <td><a>${actor.firstName}</a></td>
+      <td><a href="actor?id=${actor.id}">${actor.firstName}</a></td>
       <td>${actor.lastName}</td>
-      <td>M</td>
-      <td><a class="glyphicon glyphicon-cog btn btn-success" > Edit</a></td>
-      <td><a class="glyphicon glyphicon-remove btn btn-danger" > Delete</a></td>
+      <td>gender placeholder</td>
+      <td><a class="glyphicon glyphicon-cog btn btn-success" href="/actorform?id=${actor.id}"> Edit</a></td>
+      <td><a class="glyphicon glyphicon-remove btn btn-danger" href="/deleteActor?id=${actor.id}"> Delete</a></td>
     </tr>
   </c:forEach>
 </table></div>
-<div class="container"><a class="glyphicon glyphicon-plus btn btn-info">Add an Actor</a></div>
+<div class="container"><a  href="/actorform" class="glyphicon glyphicon-plus btn btn-info">Add an Actor</a>
+  <a href="/" class="glyphicon glyphicon-home btn btn-primary"> Home</a></div>
 
 </body>
 </html>
