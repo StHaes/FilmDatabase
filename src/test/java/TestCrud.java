@@ -17,13 +17,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
 public class TestCrud {
-//    @Autowired
-//    FilmController filmController;
-//    @Autowired
-//    FilmRepository filmRepository;
-//
-//    @Test
-//    public void testFindone(){
-//        Assert.assertNotNull("",filmRepository.findOne(1));
-//    }
+    @Autowired
+    FilmController filmController;
+    @Autowired
+    FilmRepository filmRepository;
+
+    @Test
+    public void testFindone(){
+        Assert.assertEquals("The Fellowship of the Ring",filmRepository.findOne(1).getTitle());
+    }
 }

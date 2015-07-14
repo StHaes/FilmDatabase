@@ -21,7 +21,7 @@
 </head>
 <body>
 <sf:form commandName="user" action="/makeUser" class="container">
-
+<div class="container"><h3>Please enter your desired username and password</h3></div>
   <div class="container">
     <span class="label label-default">Username:</span>
     <div><sf:input path="name" /></div>
