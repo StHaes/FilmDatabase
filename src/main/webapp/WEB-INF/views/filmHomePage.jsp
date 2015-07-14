@@ -20,6 +20,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
- <h1>This is the film home</h1>
+ <div class="container"><h1>This is the film home</h1>
+<a href="/actors" class="glyphicon glyphicon-user btn btn-default"> Actors</a>
+<a href="/films" class="glyphicon glyphicon-film btn btn-default"> Movies</a>
+<a href="/userform" class="glyphicon glyphicon-list-alt btn btn-primary"> Login</a>
+ </div>
 </body>
 </html>
