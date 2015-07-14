@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>${film.id}</title>
+    <title>${film.title}</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -25,7 +25,8 @@
 <div><h3>Genre: ${film.genre}</h3></div>
 <div style="padding: 25px">
   <p>${film.summary}</p>
-  <div><iframe width="560" height="315" src="${film.trailer}" frameborder="0" allowfullscreen></iframe> </div>
+  <div><iframe width="560" height="315" src="${film.trailer}?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>
+  <div><a href="/films" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>
 </div>
 </div>
 </div>

@@ -9,9 +9,19 @@
 <html>
 <head>
     <title></title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-${actor.firstName}
+<div class="container"><h1>${actor.firstName}</h1> <h1>${actor.lastName}</h1></div>
+<div class="container"> <h2>${actor.bio}</h2></div>
+<div class="container"><a href="/actors" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>
 
 </body>
 </html>
