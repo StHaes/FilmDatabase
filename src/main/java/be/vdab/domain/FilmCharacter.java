@@ -11,15 +11,14 @@ public class FilmCharacter {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    @OneToOne
-    private Actor actor;
+
+
 
     public FilmCharacter() {
     }
 
-    public FilmCharacter(String name, Actor actor) {
+    public FilmCharacter(String name) {
         this.name = name;
-        this.actor = actor;
     }
 
     public Integer getId() {

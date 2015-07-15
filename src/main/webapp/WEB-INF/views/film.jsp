@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: jeansmits
@@ -20,11 +21,17 @@
 </head>
 <body ><div class="container">
 <h1>${film.title}</h1>
-<div><h2>Director: ${film.director}</h2></div>
+<div><h3>Director: ${film.director}</h3></div>
 <div><h3>Length: ${film.length} min</h3></div>
 <div><h3>Genre: ${film.genre}</h3></div>
 <div style="padding: 25px">
+  <div><h3>Summary: </h3></div>
   <p>${film.summary}</p>
+  <h3>Cast: </h3>
+  <div><c:forEach var="actor" items="${film.cast}">
+    <p>${actor.filmCharacter.name} played by <a href="/actor?id=${actor.id}">${actor.firstName} ${actor.lastName}</a></p>
+  </c:forEach></div>
+  <div><h3>Trailer: </h3></div>
   <div><iframe width="560" height="315" src="${film.trailer}?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>
   <div><a href="/films" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>
 </div>

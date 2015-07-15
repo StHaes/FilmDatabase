@@ -21,6 +21,7 @@
 <body>
 <div class="container"><h1>${actor.firstName}</h1> <h1>${actor.lastName}</h1></div>
 <div class="container"> <h2>${actor.bio}</h2></div>
+<h1>${actor.filmCharacter.name}</h1>
 <div class="container"><a href="/actors" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>
 
 </body>

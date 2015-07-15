@@ -16,15 +16,23 @@ public class Actor {
     private String bio;
     @Enumerated(value =EnumType.STRING)
     private Gender gender;
+    @ManyToOne
+    @JoinColumn(name="filmId")
+    private Film film;
+    @OneToOne
+    private FilmCharacter filmCharacter;
 
 
     public Actor() {
     }
 
-    public Actor(String firstName, String lastName, String bio) {
+    public Actor(String firstName, String lastName, String bio, Gender gender,Film film, FilmCharacter filmCharacter) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.bio = bio;
+        this.gender = gender;
+        this.film = film;
+        this.filmCharacter = filmCharacter;
     }
 
     public String getFirstName() {
@@ -65,5 +73,21 @@ public class Actor {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public FilmCharacter getFilmCharacter() {
+        return filmCharacter;
+    }
+
+    public void setFilmCharacter(FilmCharacter filmCharacter) {
+        this.filmCharacter = filmCharacter;
+
+    }
+    public Film getFilm() {
+        return film;
+    }
+
+    public void setFilm(Film film) {
+        this.film = film;
     }
 }

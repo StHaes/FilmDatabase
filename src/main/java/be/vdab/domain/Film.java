@@ -3,6 +3,7 @@ package be.vdab.domain;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by jeansmits on 10/07/15.
@@ -17,14 +18,16 @@ public class Film {
     private String director;
     @Enumerated(value = EnumType.STRING)
     private Genre genre;
-//    private List<FilmCharacter> cast;
+    @OneToMany(mappedBy="film")
+    private List<Actor> cast;
     private String summary;
 //    private List<Comment> comments;
     private String trailer;
 
 
-    public Film(String title) {
+    public Film(String title, List<Actor> cast) {
         this.title = title;
+        this.cast = cast;
     }
 
     public Film() {
@@ -84,5 +87,13 @@ public class Film {
 
     public void setGenre(Genre genre) {
         this.genre = genre;
+    }
+
+    public List<Actor> getCast() {
+        return cast;
+    }
+
+    public void setCast(List<Actor> cast) {
+        this.cast = cast;
     }
 }
