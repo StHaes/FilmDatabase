@@ -51,5 +51,6 @@
         </div>
     </nav>
     <div class="container" style="border:50px"><h1>Welcome to my Database</h1></div>
+    <div class="container" style="border:50px"><img src="http://www.fun54.com/wp-content/uploads/2011/08/a-man-under-a-building-with-white-background-HD-Wallpapers-1920-x-1200.jpg" width="960" height="600" /></div>
 </body>
 </html>

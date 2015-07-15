@@ -72,6 +72,11 @@
     <sf:select path="gender" items="${genders}" class="form-control"/>
   </div>
 
+  <div class="input-group">
+    <span class="input-group-addon">Img link</span>
+    <sf:input path="img" class="form-control"/>
+  </div>
+
   <sf:hidden path="id"/>
   <div class = "input-group"><sf:button href="/actors" type="submit" class="btn btn-success">Save</sf:button>
       <a href="/actors" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>

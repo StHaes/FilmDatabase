@@ -55,7 +55,7 @@
     <tr>
       <td><a href="actor?id=${actor.id}">${actor.firstName}</a></td>
       <td>${actor.lastName}</td>
-      <td>gender placeholder</td>
+      <td>${actor.gender}</td>
       <td><a class="glyphicon glyphicon-cog btn btn-default" href="/actorform?id=${actor.id}"> Edit</a></td>
       <td><a class="glyphicon glyphicon-remove btn btn-default" href="/deleteActor?id=${actor.id}"> Delete</a></td>
     </tr>

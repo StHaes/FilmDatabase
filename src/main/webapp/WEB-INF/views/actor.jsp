@@ -46,7 +46,7 @@
 <div class="container">
     <div class="panel panel-success">
         <div class="panel-heading"><h3>${actor.firstName} ${actor.lastName}</h3></div>
-        <div class="panel-body"><p>${actor.bio}</p></div>
+        <div class="panel-body"><img src="${actor.img}" class="img-responsive" style="float:left;padding-right: 1rem"/><p>${actor.bio}</p></div></div>
 
     </div>
     <div class="container"><a href="/actors" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>

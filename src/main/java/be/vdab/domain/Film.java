@@ -20,6 +20,7 @@ public class Film {
     private Genre genre;
     @OneToMany(mappedBy="film")
     private List<Actor> cast;
+    @Lob
     private String summary;
 //    private List<Comment> comments;
     private String trailer;

@@ -13,9 +13,11 @@ public class Actor {
     private Integer id;
     private String firstName;
     private String lastName;
+    @Lob
     private String bio;
     @Enumerated(value =EnumType.STRING)
     private Gender gender;
+    private String img;
     @ManyToOne
     @JoinColumn(name="filmId")
     private Film film;
@@ -26,13 +28,14 @@ public class Actor {
     public Actor() {
     }
 
-    public Actor(String firstName, String lastName, String bio, Gender gender,Film film, FilmCharacter filmCharacter) {
+    public Actor(String firstName, String lastName, String bio, Gender gender,Film film, FilmCharacter filmCharacter, String img) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.bio = bio;
         this.gender = gender;
         this.film = film;
         this.filmCharacter = filmCharacter;
+        this.img=img;
     }
 
     public String getFirstName() {
@@ -89,5 +92,13 @@ public class Actor {
 
     public void setFilm(Film film) {
         this.film = film;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
