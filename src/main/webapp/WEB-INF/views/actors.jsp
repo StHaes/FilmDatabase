@@ -20,6 +20,30 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/films" class="glyphicon glyphicon-film"> Movies</a></li>
+        <li><a href="/actors" class="glyphicon glyphicon-user"> Actors</a></li>
+        <li><a href="/userform" class="glyphicon glyphicon-list-alt"> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <div class="container"><h1>All Actors</h1></div>
 <div class="container"><table class="table table-striped">
   <th>Firstname</th>
@@ -32,13 +56,13 @@
       <td><a href="actor?id=${actor.id}">${actor.firstName}</a></td>
       <td>${actor.lastName}</td>
       <td>gender placeholder</td>
-      <td><a class="glyphicon glyphicon-cog btn btn-success" href="/actorform?id=${actor.id}"> Edit</a></td>
-      <td><a class="glyphicon glyphicon-remove btn btn-danger" href="/deleteActor?id=${actor.id}"> Delete</a></td>
+      <td><a class="glyphicon glyphicon-cog btn btn-default" href="/actorform?id=${actor.id}"> Edit</a></td>
+      <td><a class="glyphicon glyphicon-remove btn btn-default" href="/deleteActor?id=${actor.id}"> Delete</a></td>
     </tr>
   </c:forEach>
 </table></div>
-<div class="container"><a  href="/actorform" class="glyphicon glyphicon-plus btn btn-info">Add an Actor</a>
-  <a href="/" class="glyphicon glyphicon-home btn btn-primary"> Home</a></div>
+<div class="container"><a  href="/actorform" class="glyphicon glyphicon-plus btn btn-default">Add Actor</a>
+
 
 </body>
 </html>

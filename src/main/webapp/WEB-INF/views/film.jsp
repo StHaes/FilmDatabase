@@ -18,23 +18,54 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </head>
-<body ><div class="container">
-<h1>${film.title}</h1>
-<div><h3>Director: ${film.director}</h3></div>
-<div><h3>Length: ${film.length} min</h3></div>
-<div><h3>Genre: ${film.genre}</h3></div>
-<div style="padding: 25px">
-  <div><h3>Summary: </h3></div>
-  <p>${film.summary}</p>
-  <h3>Cast: </h3>
-  <div><c:forEach var="actor" items="${film.cast}">
+<body >
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/films" class="glyphicon glyphicon-film"> Movies</a></li>
+        <li><a href="/actors" class="glyphicon glyphicon-user"> Actors</a></li>
+        <li><a href="/userform" class="glyphicon glyphicon-list-alt"> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="panel panel-warning">
+<div class="panel-heading"><h3>${film.title}</h3></div>
+<div class="panel-body">
+
+  <div><p>Director: ${film.director}</p></div>
+  <div><p>Length: ${film.length} min</p></div>
+  <div><p>Genre: ${film.genre}</p></div>
+</div>
+    </div>
+<div class="panel panel-default">
+  <div class="panel-heading"><h3>Summary: </h3></div>
+  <div class="panel-body"><p>${film.summary}</p></div>
+  <div class="panel-heading"><h3>Cast: </h3></div>
+  <div class="panel-body"><c:forEach var="actor" items="${film.cast}">
     <p>${actor.filmCharacter.name} played by <a href="/actor?id=${actor.id}">${actor.firstName} ${actor.lastName}</a></p>
   </c:forEach></div>
-  <div><h3>Trailer: </h3></div>
-  <div><iframe width="560" height="315" src="${film.trailer}?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>
-  <div><a href="/films" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>
+  <div class="panel-heading"><h3>Trailer: </h3></div>
+  <div class="panel-body"><iframe width="560" height="315" src="${film.trailer}?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>
 </div>
+  <div><a href="/films" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>
 </div>
 </div>
 </body>

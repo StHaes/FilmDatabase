@@ -25,7 +25,6 @@
     </style>
 </head>
 <body>
-<div class="container">
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -38,7 +37,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Home</a>
+                <a class="navbar-brand" href="/">Home</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,7 +51,5 @@
         </div>
     </nav>
     <div class="container" style="border:50px"><h1>Welcome to my Database</h1></div>
-</div>
-</div>
 </body>
 </html>

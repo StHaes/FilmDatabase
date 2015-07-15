@@ -19,12 +19,36 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <Style>
-    div{
-      margin-bottom: 15px;
+    .input-group{
+      margin-top: 15px;
     }
   </Style>
 </head>
 <body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/films" class="glyphicon glyphicon-film"> Movies</a></li>
+        <li><a href="/actors" class="glyphicon glyphicon-user"> Actors</a></li>
+        <li><a href="/userform" class="glyphicon glyphicon-list-alt"> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <sf:form commandName="actor" action="/makeActor" class="container form">
 <div><h1>Add/Edit and Actor</h1></div>
   <div class="input-group">
@@ -49,7 +73,7 @@
   </div>
 
   <sf:hidden path="id"/>
-  <div><sf:button href="/actors" type="submit" class="btn btn-success">Add an actor</sf:button>
+  <div class = "input-group"><sf:button href="/actors" type="submit" class="btn btn-success">Save</sf:button>
       <a href="/actors" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>
 
 </sf:form>
