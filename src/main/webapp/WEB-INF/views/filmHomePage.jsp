@@ -10,11 +10,12 @@
 <html>
 <head>
 
-    <script>(function(d, s, id) {
+    <script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.4";
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
     <script>window.twttr = (function (d, s, id) {
@@ -52,14 +53,15 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-        var counter =0
-        function easterEgg(){
-            counter =counter +1
-            if (counter>9000){
+        var counter = 0
+        function easterEgg() {
+            counter = counter + 1
+            if (counter > 9000) {
                 alert("Its over 9000!")
             }
         }
     </script>
+
 </head>
 <body>
 
@@ -92,8 +94,8 @@
                                                                               class="twitter-share-button"
                                                                               data-url="http://StijnMovieDatabase"
                                                                               data-text="This site is awesome"
-                                                                              data-hashtags="Java,Project,NoFilter">Talk
-    about it</a><a class="fb-share-button" data-href="http://StijnMovieDatabase" data-layout="button_count"></a></div>
+                                                                              data-hashtags="Java,Project,NoFilter">Tweet</a><a
+        class="fb-share-button" data-href="http://StijnMovieDatabase" data-layout="button_count"></a></div>
 <div class="container" style="border:50px"><img
         src="http://www.fun54.com/wp-content/uploads/2011/08/a-man-under-a-building-with-white-background-HD-Wallpapers-1920-x-1200.jpg"
         width="960" height="600"/></div>
