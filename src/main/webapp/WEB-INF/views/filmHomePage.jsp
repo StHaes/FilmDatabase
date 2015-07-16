@@ -56,6 +56,7 @@
         var counter = 0
         function easterEgg() {
             counter = counter + 1
+            document.getElementById("counter").innerHTML = counter
             if (counter > 9000) {
                 alert("Its over 9000!")
             }
@@ -64,7 +65,6 @@
 
 </head>
 <body>
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -85,7 +85,8 @@
                 <li><a href="/films" class="glyphicon glyphicon-film"> Movies</a></li>
                 <li><a href="/actors" class="glyphicon glyphicon-user"> Actors</a></li>
                 <li><a href="/userform" class="glyphicon glyphicon-list-alt"> Register</a></li>
-                <li><a class="glyphicon glyphicon-fire" onclick="easterEgg()"> Vegeta</a></li>
+                <li><a class="glyphicon glyphicon-fire" onclick="easterEgg()"> Vegeta </a></li>
+                <li><a id="counter"></a></li>
             </ul>
         </div>
     </div>
