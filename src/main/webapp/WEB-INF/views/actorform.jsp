@@ -44,7 +44,7 @@
       <ul class="nav navbar-nav">
         <li><a href="/films" class="glyphicon glyphicon-film"> Movies</a></li>
         <li><a href="/actors" class="glyphicon glyphicon-user"> Actors</a></li>
-        <li><a href="/userform" class="glyphicon glyphicon-list-alt"> Login</a></li>
+        <li><a href="/userform" class="glyphicon glyphicon-list-alt"> Register</a></li>
       </ul>
     </div>
   </div>
