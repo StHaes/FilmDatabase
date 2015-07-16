@@ -22,6 +22,7 @@ public class Film {
     private List<Actor> cast;
     @Lob
     private String summary;
+    private String img;
 //    private List<Comment> comments;
     private String trailer;
 
@@ -96,5 +97,13 @@ public class Film {
 
     public void setCast(List<Actor> cast) {
         this.cast = cast;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

@@ -59,7 +59,7 @@
     <div class="input-group">
         <span class="input-group-addon">Title</span>
         <sf:input path="title" class="form-control"/>
-        <sf:errors path="title"/>
+        <sf:errors path="title" cssstyle= "color:red"/>
     </div>
 
     <div class="input-group">

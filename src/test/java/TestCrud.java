@@ -1,6 +1,8 @@
 import be.vdab.Application;
+import be.vdab.controller.ActorController;
 import be.vdab.controller.FilmController;
 import be.vdab.domain.Film;
+import be.vdab.repository.ActorRepository;
 import be.vdab.repository.FilmRepository;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,14 +23,19 @@ public class TestCrud {
     FilmController filmController;
     @Autowired
     FilmRepository filmRepository;
+    @Autowired
+    ActorController actorController;
+    @Autowired
+    ActorRepository actorRepository;
 
     @Test
     public void testFindFilm(){
         Assert.assertEquals("The Fellowship of the Ring",filmRepository.findOne(1).getTitle());
     }
+
     @Test
-    public void deleteFilm(){
-        filmController.deleteFilm(2);
-        Assert.assertNull(filmRepository.findOne(2));
+    public void findActor(){
+        Assert.assertEquals("Orlando",actorRepository.findOne(1).getFirstName());
     }
+
 }

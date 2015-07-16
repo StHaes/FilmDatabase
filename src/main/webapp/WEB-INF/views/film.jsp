@@ -57,13 +57,13 @@
     </div>
 <div class="panel panel-default">
   <div class="panel-heading"><h3>Summary: </h3></div>
-  <div class="panel-body"><p>${film.summary}</p></div>
+  <div class="panel-body"><img src="${film.img}" class="img-responsive" style="float:left;padding-right: 1rem"/><p>${film.summary}</p></div>
   <div class="panel-heading"><h3>Cast: </h3></div>
   <div class="panel-body"><c:forEach var="actor" items="${film.cast}">
     <p>${actor.filmCharacter.name} played by <a href="/actor?id=${actor.id}">${actor.firstName} ${actor.lastName}</a></p>
   </c:forEach></div>
   <div class="panel-heading"><h3>Trailer: </h3></div>
-  <div class="panel-body"><iframe width="560" height="315" src="${film.trailer}?autoplay=1" frameborder="0" allowfullscreen></iframe> </div>
+  <div class="panel-body"><iframe width="560" height="315" src="${film.trailer}" frameborder="0" allowfullscreen></iframe> </div>
 </div>
   <div><a href="/films" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>
 </div>

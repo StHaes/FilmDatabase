@@ -1,5 +1,6 @@
 package be.vdab.controller;
 
+import be.vdab.domain.Actor;
 import be.vdab.domain.Film;
 
 import be.vdab.domain.Genre;
@@ -62,6 +63,10 @@ public class FilmController {
 
     @RequestMapping(value="/deleteFilm")
     public String deleteFilm(@RequestParam(value="id") Integer filmId){
+       List<Actor> actors = filmRepository.findOne(filmId).getCast();
+        for (Actor actor : actors) {
+            actor.setFilm(null);
+        }
         filmRepository.delete(filmId);
         return "redirect:/films";
     }

@@ -9,6 +9,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.4";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <script>window.twttr = (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
                 t = window.twttr || {};
@@ -25,6 +33,15 @@
 
         return t;
     }(document, "script", "twitter-wjs"));</script>
+    <script>!function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + '://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, 'script', 'twitter-wjs');</script>
     <title>Film</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -34,11 +51,15 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <style>
-        nav {
-            margin-top: 25px;
+    <script>
+        var counter =0
+        function easterEgg(){
+            counter =counter +1
+            if (counter>9000){
+                alert("Its over 9000!")
+            }
         }
-    </style>
+    </script>
 </head>
 <body>
 
@@ -61,25 +82,20 @@
             <ul class="nav navbar-nav">
                 <li><a href="/films" class="glyphicon glyphicon-film"> Movies</a></li>
                 <li><a href="/actors" class="glyphicon glyphicon-user"> Actors</a></li>
-                <li><a href="/userform" class="glyphicon glyphicon-list-alt"> Login</a></li>
+                <li><a href="/userform" class="glyphicon glyphicon-list-alt"> Register</a></li>
+                <li><a class="glyphicon glyphicon-fire" onclick="easterEgg()"> Vegeta</a></li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="container" style="border:50px"><h1>Welcome to my Database</h1></div>
+<div class="container" style="border:50px"><h1>Welcome to my Database</h1> <a href="https://twitter.com/share"
+                                                                              class="twitter-share-button"
+                                                                              data-url="http://StijnMovieDatabase"
+                                                                              data-text="This site is awesome"
+                                                                              data-hashtags="Java,Project,NoFilter">Talk
+    about it</a><a class="fb-share-button" data-href="http://StijnMovieDatabase" data-layout="button_count"></a></div>
 <div class="container" style="border:50px"><img
         src="http://www.fun54.com/wp-content/uploads/2011/08/a-man-under-a-building-with-white-background-HD-Wallpapers-1920-x-1200.jpg"
         width="960" height="600"/></div>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://StijnMovieDatabase"
-   data-text="This site is awesome" data-hashtags="Java,Project">Tweet</a>
-<script>!function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-    if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = p + '://platform.twitter.com/widgets.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }
-}(document, 'script', 'twitter-wjs');</script>
 </body>
 </html>

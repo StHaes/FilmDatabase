@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: jeansmits
@@ -49,7 +50,14 @@
         <div class="panel-body"><img src="${actor.img}" class="img-responsive" style="float:left;padding-right: 1rem"/><p>${actor.bio}</p></div></div>
 
     </div>
+<c:choose>
+<c:when test="${actor.firstName == 'Ian'}" >
+    <div class="container"> <img src="http://media.giphy.com/media/njYrp176NQsHS/giphy.gif" class="img-responsive"/></div>
+</c:when>
+    <c:otherwise>
     <div class="container"><a href="/actors" class="glyphicon glyphicon-arrow-left btn btn-default"> Back</a></div>
+    </c:otherwise>
+</c:choose>
 </div>
 </body>
 </html>

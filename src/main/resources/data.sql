@@ -3,8 +3,8 @@ INSERT INTO film_character (name) VALUES ('Gandalf');
 INSERT INTO film_character (name) VALUES ('The Joker');
 INSERT INTO film_character (name) VALUES ('Harley Quinn');
 
-INSERT INTO film (director,genre, length, title, summary, trailer) VALUES ('Peter Jackson','FANTASY', '174', 'The Fellowship of the Ring','A few dudes are looking to get rid of a ring, the thing keeps following them.', 'https://www.youtube.com/embed/Pki6jbSbXIY');
-INSERT INTO film (director,genre, length, title, summary, trailer) VALUES ('David Ayer','ACTION', '201', 'Suicide Squad','Bad guys from DC universe work together to save the world', 'https://www.youtube.com/embed/WI3hecGO_04');
+INSERT INTO film (director,genre, length, title, summary, trailer,img) VALUES ('Peter Jackson','FANTASY', '174', 'The Fellowship of the Ring','A few dudes are looking to get rid of a ring, the thing keeps following them.', 'https://www.youtube.com/embed/Pki6jbSbXIY','http://ia.media-imdb.com/images/M/MV5BNTEyMjAwMDU1OV5BMl5BanBnXkFtZTcwNDQyNTkxMw@@._V1_SY317_CR1,0,214,317_AL_.jpg');
+INSERT INTO film (director,genre, length, title, summary, trailer,img) VALUES ('David Ayer','ACTION', '201', 'Suicide Squad','Bad guys from DC universe work together to save the world', 'https://www.youtube.com/embed/WI3hecGO_04','http://ia.media-imdb.com/images/M/MV5BMjMzMTM4MzM1OV5BMl5BanBnXkFtZTgwODAwMzE2NTE@._V1_SY317_CR91,0,214,317_AL_.jpg');
 
 INSERT INTO actor (first_name, gender, last_name,film_character_id,film_id,img,bio) VALUES ('Orlando', 'M', 'Bloom','1','1','http://ia.media-imdb.com/images/M/MV5BMjE1MDkxMjQ3NV5BMl5BanBnXkFtZTcwMzQ3Mjc4MQ@@._V1_UY317_CR8,0,214,317_AL_.jpg','Famous for his role in lord of the rings and pirates of the carribean.');
 INSERT INTO actor (first_name, gender, last_name,film_character_id,film_id,img,bio) VALUES ('Ian', 'M', 'Mckellen','2','1','http://ia.media-imdb.com/images/M/MV5BMTQ2MjgyNjk3MV5BMl5BanBnXkFtZTcwNTA3NTY5Mg@@._V1_UY317_CR10,0,214,317_AL_.jpg','You shall not pass!');
